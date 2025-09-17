@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhanced Form Example</title>
+  <meta name="description" content="An enhanced HTML5 form with validation, lists, tables, and media.">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    header, main, footer {
+      max-width: 800px;
+      margin: auto;
+      padding: 1em;
+    }
+    header {
+      background: #0366d6;
+      color: white;
+    }
+    h1, h2 {
+      margin: 0.5em 0;
+    }
+    form {
+      background: white;
+      padding: 1em;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 0.8em;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.3em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      width: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5em;
+      text-align: left;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 2em;
+    }
+    .sr-only {
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Enhanced Form Page</h1>
+    <p>A sample page demonstrating lists, tables, media, and a complete HTML5 form.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Our Services</h2>
+      <ul>
+        <li>Web Development</li>
+        <li>UI/UX Design</li>
+        <li>SEO Optimization</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Pricing Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Basic</th>
+            <th>Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Web Development</td>
+            <td>$500</td>
+            <td>$1000</td>
+          </tr>
+          <tr>
+            <td>Design</td>
+            <td>$300</td>
+            <td>$600</td>
+          </tr>
+          <tr>
+            <td>SEO</td>
+            <td>$200</td>
+            <td>$400</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Promotional Video</h2>
+      <video controls width="100%">
+        <source src="sample.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section>
+      <h2>Registration Form</h2>
+      <form action="#" method="post" autocomplete="on">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter a secure password" required minlength="6">
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+254700000000" required pattern="\\+254[0-9]{9}" autocomplete="tel">
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">--Select--</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+
+        <fieldset>
+          <legend>Preferred Contact Method:</legend>
+          <label><input type="radio" name="contact" value="email" required>Email</label>
+          <label><input type="radio" name="contact" value="phone">Phone</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Subscribe to:</legend>
+          <label><input type="checkbox" name="updates" value="newsletter"> Newsletter</label>
+          <label><input type="checkbox" name="updates" value="offers"> Special Offers</label>
+        </fieldset>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" placeholder="Enter your comments here"></textarea>
+
+        <label for="readonly-field">Referral Code (Read-only):</label>
+        <input type="text" id="readonly-field" value="WELCOME2025" readonly>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <time datetime="2025">2025</time> Enhanced Form Demo. All rights reserved.</p>
+  </footer>
+</body>
+</html>
